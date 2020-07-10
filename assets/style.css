@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+.brand-name{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    margin-top: 350px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
