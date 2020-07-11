@@ -3,6 +3,10 @@
 // test run
 
 $(document).ready(function () {
+    $("#search-button").click(function(event){
+        console.log(event.target);
+        // alert("button clicked");
+        // console.log("button clicked");
     
     var apiKey = "1ab12a446aade358252321bfa87f68bc";
     // removes all child nodes
@@ -21,7 +25,8 @@ $(document).ready(function () {
         }
     }).then(function (response) {
         console.log(response);
-
+        
 
     });
+});
 })
