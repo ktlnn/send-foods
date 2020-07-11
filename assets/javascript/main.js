@@ -26,8 +26,16 @@
 
 // test run
 
+
+
 $(document).ready(function (){
+   $("#search-button").click(function(event){
+       console.log(event.target);
+        
+   });
+console.log("button clicked");
     $("#search-input").empty();
+    
     var cityInput = $("#search-input").val();
 
 
