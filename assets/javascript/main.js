@@ -13,7 +13,6 @@ $(document).ready(function () {
     $("#search-input").empty();
     // keeps track of search-input value, which is now linked to cityInput
     var cityInput = $("#search-input").val();
-    cityInput = "new york";
     var cityURL = "https://developers.zomato.com/api/v2.1/cities?count=6&q=" + cityInput;
     console.log(cityURL);
     $.ajax({
@@ -25,8 +24,19 @@ $(document).ready(function () {
         }
     }).then(function (response) {
         console.log(response);
+
+    
         
+
+
+
+
+
+
+
 
     });
 });
 })
+
+
