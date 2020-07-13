@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    
 }
 
 .brand-name{
@@ -7,7 +8,7 @@ body {
     font-size: 100px;
     color: white;
     font-weight: bold;
-    margin-top: 350px;
+    margin-top: 300px;
 }
 
 .menu{
@@ -16,5 +17,8 @@ body {
     justify-content: center;
 }
 
+h1{
+    font-family: 'Playfair Display SC', serif;
+}
 
 /* no changes - pham, just adding a branch called logic*/
