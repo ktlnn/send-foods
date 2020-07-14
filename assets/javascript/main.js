@@ -42,41 +42,63 @@ function handleSearchParameters() {
             }
         }).then(function (result) {
             console.log(result);
+            // using console to target where restaurant information lies in object
+            // keeping track using cuisineID variable
             var cuisineID = result.restaurants;
+            // forward loop used since object displays restaurant information as an array
+            // will allow for card to be created and information to be displayed onto the page
             for (var i = 0; i < cuisineID.length; i++) {
                 console.log(cuisineID[i] + "hello");
-                var createCardContainer = $("<div>").addClass("col s12 l3").attr("id", "card" + i);
-                $("#result-cards").append(createCardContainer);
-                var containerId = $("#card" + i);
-                var createCard = $("<div>").addClass("card large hoverable");
-                var createCardImg = $("<div>").addClass("card-image");
-                var createCardContent = $("<div>").addClass("card-content");
-                var createCardAction = $("<div>").addClass("card-action");
+                // keeping track of the variable that is creating a container for cards
+                // adding class to style the card container
+                // adding attribute "id" that gives createCardContainer id = "card" + i 
+                var createCardContainer = $("<div>").addClass("").attr("id", "card" + i);
+                // appending card container to id "result-cards" in html 
+                $("result-cards").append(createCardContainer);
+                // keeping track of the variable that is creating the div for the card/card image/ card content/ card link 
+                // adding class to style each card component
+                var createCard = $("<div>").addClass("");    
+                var createCardImageDiv = $("<div>").addClass("");
+                var createCardTitle = $("<p>").addClass("");
+                var createCardContent = $("<div>").addClass("");
+                // var createCardLink = $("<div>").addClass("");
 
+                // keeping track of starting position for targeting specific items in result object
                 var results = result.restaurants[i];
+                // allows for restaurant name to be dipslayed 
+                createCardTitle.text(results.restaurant.name);
+                createCardImageDiv.append(createCardTitle);
+                // keeping track of variable that creates an image tag for all images
+                var createCardImage = $("<img>");
+                // gives source attribute to image tag created, using console to target where image is 
+                createCardImage.attr("src", results.restaurant.thumb);
+                // appends card image to div created
+                createCardImageDiv.append(createCardImage);
 
-                createCardImg.append($("<img>").addClass("responsive-image").attr("src", results.restaurant.thumb))
+                createCard.append(createCardImageDiv);
 
-                createCardImg.append($("<span>").addClass("card-title").text(results.restaurant.name))
+                var resRating = results.restaurant.user_rating.aggregate_rating;
+                var ratingTag = $("<p>");
+                resRating.append(ratingTag).text("Restaurant Rating: " + resRating);
+                createCardContent.append(ratingTag);
 
+                var resAddress = results.restaurant.location.address;
+                var addressTag = $("<p>");
+                resAddress.append(addressTag).text("Restaurant Address: " + resAddress);
+                createCardContent.append(addressTag);
 
-
-                createCard.append(createCardImg);
-
-                var resRatingNum = results.restaurant.user_rating.aggregate_rating;
-                var resRatingStr = results.restaurant.user_rating.rating_text;
-                createCardContent.append($("<p>").addClass("resRating").html('<i class="material-icons">star</i>' + "Restaurant Rating: " + resRatingNum + " " + resRatingStr).css('text-align', 'left'))
-                var resAddr = results.restaurant.location.address;
                 var resPhone = results.restaurant.phone_numbers;
-                createCardContent.append($("<p>").addClass("resInfo").html(' <i class="material-icons">location_on</i>  ' + resAddr + '<br>' + '<i class="material-icons">phone</i> ' + resPhone))
+                var phoneTag = $("<p>");
+                resPhone.append(phoneTag).text("Restaurant Phone Number: " + resPhone);
+                createCardContent.append(phoneTag);
+
                 createCard.append(createCardContent);
 
-                var resLink = results.restaurant.url;
-                createCardAction.append($("<a>").attr("href", resLink).text('See More').attr("target", "_blank"))
 
-                createCard.append(createCardAction);
 
-                containerId.append(createCard);
+
+
+                
             }
         });
     });
