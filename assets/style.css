@@ -86,4 +86,10 @@ h1{
     font-family: 'Playfair Display SC', serif;
 }
 
-
+.card-container,
+.create-card,
+.image-div,
+.card-title,
+.card-content{
+  background-color: white;
+}

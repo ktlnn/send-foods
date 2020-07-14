@@ -52,15 +52,15 @@ function handleSearchParameters() {
                 // keeping track of the variable that is creating a container for cards
                 // adding class to style the card container
                 // adding attribute "id" that gives createCardContainer id = "card" + i 
-                var createCardContainer = $("<div>").addClass("").attr("id", "card" + i);
+                var createCardContainer = $("<div>").addClass("card-container").attr("id", "card" + i);
                 // appending card container to id "result-cards" in html 
                 $("result-cards").append(createCardContainer);
                 // keeping track of the variable that is creating the div for the card/card image/ card content/ card link 
                 // adding class to style each card component
-                var createCard = $("<div>").addClass("");    
-                var createCardImageDiv = $("<div>").addClass("");
-                var createCardTitle = $("<p>").addClass("");
-                var createCardContent = $("<div>").addClass("");
+                var createCard = $("<div>").addClass("create-card");    
+                var createCardImageDiv = $("<div>").addClass("image-div");
+                var createCardTitle = $("<p>").addClass("card-title");
+                var createCardContent = $("<div>").addClass("card-content");
                 // var createCardLink = $("<div>").addClass("");
 
                 // keeping track of starting position for targeting specific items in result object
