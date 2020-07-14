@@ -57,48 +57,40 @@ function handleSearchParameters() {
                 $("result-cards").append(createCardContainer);
                 // keeping track of the variable that is creating the div for the card/card image/ card content/ card link 
                 // adding class to style each card component
-                var createCard = $("<div>").addClass("");    
-                var createCardImageDiv = $("<div>").addClass("");
-                var createCardTitle = $("<p>").addClass("");
-                var createCardContent = $("<div>").addClass("");
+                var containerId = $("#card" + i);
+                var createCard = $("<div>")//.addClass("");
+                var createCardImage = $("<div>")//.addClass("");
+                var createCardContent = $("<div>")//.addClass("");
                 // var createCardLink = $("<div>").addClass("");
 
                 // keeping track of starting position for targeting specific items in result object
                 var results = result.restaurants[i];
-                // allows for restaurant name to be dipslayed 
-                createCardTitle.text(results.restaurant.name);
-                createCardImageDiv.append(createCardTitle);
-                // keeping track of variable that creates an image tag for all images
-                var createCardImage = $("<img>");
-                // gives source attribute to image tag created, using console to target where image is 
-                createCardImage.attr("src", results.restaurant.thumb);
-                // appends card image to div created
-                createCardImageDiv.append(createCardImage);
 
-                createCard.append(createCardImageDiv);
+                createCardImage.append($("<p>").text(results.restaurant.name));
+                createCardImage.append($("<img>").attr("src", results.restaurant.thumb));
+
+                createCard.append(createCardImage);
 
                 var resRating = results.restaurant.user_rating.aggregate_rating;
-                var ratingTag = $("<p>");
-                resRating.append(ratingTag).text("Restaurant Rating: " + resRating);
-                createCardContent.append(ratingTag);
+                createCardContent.append($("<p>").html("Restaurant Rating: " + resRating));
 
                 var resAddress = results.restaurant.location.address;
-                var addressTag = $("<p>");
-                resAddress.append(addressTag).text("Restaurant Address: " + resAddress);
-                createCardContent.append(addressTag);
+                createCardContent.append($("<p>").html("Restaurant Address: " + resAddress));
 
                 var resPhone = results.restaurant.phone_numbers;
-                var phoneTag = $("<p>");
-                resPhone.append(phoneTag).text("Restaurant Phone Number: " + resPhone);
-                createCardContent.append(phoneTag);
+                createCardContent.append($("<p>").html("Restaurant Phone Number: " + resPhone));
 
                 createCard.append(createCardContent);
 
+                containerId.append(createCard);
 
 
 
 
-                
+
+
+
+
             }
         });
     });
