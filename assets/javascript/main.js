@@ -28,7 +28,7 @@ function handleSearchParameters() {
         }
     }).then(function (response) {
         console.log(response);
-        // var cuisine =
+        
         // used console.log(response) to target the location id
         // keeping track of the location id with cityID variable
         var cityID = response.location_suggestions[0].id;
@@ -68,7 +68,7 @@ function handleSearchParameters() {
                 createCardContent.append($("<p>").addClass("resRating").html("Restaurant Rating: " + resRating + " ").css('text-align', 'left'));
                 var resAddr = results.restaurant.location.address;
                 var resPhone = results.restaurant.phone_numbers;
-                createCardContent.append($("<p>").addClass("resInfo").html(' <i class="material-icons">location_on</i>  ' + resAddr + '<br>' + '<i class="material-icons">phone</i> ' + resPhone))
+                createCardContent.append($("<p>").addClass("resInfo").html("Address: " + resAddr + '<br>' + "Phone Number: " + resPhone))
                 createCard.append(createCardContent);
 
                 var resLink = results.restaurant.url;
