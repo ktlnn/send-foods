@@ -1,7 +1,3 @@
-
-
-// test run
-
 $(document).ready(function () {
     $("#search-button").click(function (event) {
         console.log(event.target);
@@ -20,13 +16,13 @@ $(document).ready(function () {
             method: "GET",
             beforeSend: function (request) {
                 request.setRequestHeader("user-key", "1ab12a446aade358252321bfa87f68bc");
-                console.log(request);
+                // console.log(request);
             }
         }).then(function (response) {
             console.log(response);
             // var cuisine =
             var cityID = response.location_suggestions[0].id;
-            var cuisineURL = "https://developers.zomato.com/api/v2.1/search?&count=6&entity_id=" + cityID;
+            var cuisineURL = "https://developers.zomato.com/api/v2.1/search?&count=6&entity_id=" + cityID + "&entity_type=city";
                 $.ajax({
                     url: cuisineURL,
                     method: "GET",
@@ -35,6 +31,11 @@ $(document).ready(function () {
                     }
                 }).then(function (result) {
                     console.log(result);
+                    var cuisineID = result.restaurants[0].restaurant;
+                    for(var i=0; i < cuisineID.length; i++){
+                        console.log(cuisineID[i] + "hello");
+                       
+                    }
                 });
         });
     });
