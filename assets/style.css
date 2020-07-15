@@ -95,3 +95,16 @@ h1{
 .card-title {
   background-color: white;
 }
+
+.card-container{
+  margin: 30px;
+  margin-right: 80%;
+  padding: 1px;
+  
+  
+}
+
+.card-image{
+  display: block;
+  
+}
