@@ -1,0 +1,202 @@
+html {
+  background: url(../images/donut.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background: none;
+}
+
+
+.brand-name {
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  margin-top: 240px;
+ 
+}
+
+.menu {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menu input {
+  width: 80%;
+}
+
+h1 {
+  font-family: "Playfair Display SC", serif;
+
+}
+
+/* for home and developer button */
+
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display SC", serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 21px;
+  display: block;
+  padding: 5px 10px;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 10px;
+  transition: all 0.5s;
+}
+a:hover {
+  background-color: #e91e63;
+  color: white;
+}
+a:before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #e91e63;
+  border-width: 0 0 3px 3px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+a:hover:before {
+  opacity: 1;
+  bottom: -7px;
+  left: -7px;
+}
+a:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #e91e63;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+a:hover:after {
+  opacity: 1;
+  top: -7px;
+  right: -7px;
+}
+
+
+/* .search-button{
+
+} */
+
+
+
+
+/* Contact Page*/
+
+/* .contact-bg {
+  background: url(/assets/images/food.jpeg) no-repeat center center fixed;
+  background-color: #000000;
+  } */
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.navigation{
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+.contact-section{
+  padding: 80px 0;
+  
+}
+
+
+.form-container {
+  background-color: rgba(0, 0, 0, .8);
+  max-width: 600px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 25px;
+  
+
+}
+
+.contact-section h1{
+  text-align: center;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #000000;
+  padding: 20px 40px;
+  outline: none;
+  color: #ffffff;
+  transition: 0.5s;
+  font-family: "Playfair Display SC", serif;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: "Playfair Display SC", serif;
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+
+}
+
