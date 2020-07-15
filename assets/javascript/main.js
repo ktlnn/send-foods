@@ -42,9 +42,15 @@ function handleSearchParameters() {
             }
         }).then(function (result) {
             console.log(result);
+                  // used console to go through "result" object and found where the info for restaurants is located
+            // keeping track of restaurant info 
             var cuisineID = result.restaurants;
+            // since restaurant info is located in an array, for loop is able to be used
+            // this forward loop allows "for" the card being created inside "for" loop to access info from database
             for (var i = 0; i < cuisineID.length; i++) {
                 console.log(cuisineID[i] + "hello");
+                // keeping track of new <div> being created with jquery (lines 53-60)
+                // adds class that allows for css style to be applied
                 var createCardContainer = $("<div>").addClass("card-container").attr("id", "card" + i);
                 $("#result-cards").append(createCardContainer);
                 var containerId = $("#card" + i);
@@ -52,12 +58,15 @@ function handleSearchParameters() {
                 var createCardImage = $("<div>").addClass("card-image");
                 var createCardContent = $("<div>").addClass("card-content");
                 var createCardAction = $("<div>").addClass("card-action");
-
+                // keeping track of array found which is where restaurant info is located using console 
                 var results = result.restaurants[i];
-
+                createCardImage.append($("<p>").addClass("card-title").text(results.restaurant.name))
+                // appends image tag to var createCardImage
+                // adds class that allows for css style to be applied
+                // gives image source attr which displays image found using consle
                 createCardImage.append($("<img>").addClass("card-image").attr("src", results.restaurant.thumb))
 
-                createCardImage.append($("<span>").addClass("card-title").text(results.restaurant.name))
+                
 
 
 
@@ -65,10 +74,10 @@ function handleSearchParameters() {
 
                 var resRating = results.restaurant.user_rating.aggregate_rating;
                 
-                createCardContent.append($("<p>").addClass("resRating").html("Restaurant Rating: " + resRating + " ").css('text-align', 'left'));
+                createCardContent.append($("<p>").addClass("res-rating").html("Rating: " + resRating + " stars"));
                 var resAddr = results.restaurant.location.address;
                 var resPhone = results.restaurant.phone_numbers;
-                createCardContent.append($("<p>").addClass("resInfo").html("Address: " + resAddr + '<br>' + "Phone Number: " + resPhone))
+                createCardContent.append($("<p>").addClass("res-info").html("Address: " + resAddr + '<br>' + "Phone Number: " + resPhone))
                 createCard.append(createCardContent);
 
                 var resLink = results.restaurant.url;
