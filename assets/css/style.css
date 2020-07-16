@@ -55,13 +55,13 @@ ul li {
 
 a {
   text-decoration: none;
-  color: #ffff;
+  color: darkred;
   font-size: 21px;
   display: block;
   padding: 5px 10px;
   position: relative;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 10px;
   transition: all 0.5s;
 }
 a:hover {
@@ -200,3 +200,16 @@ textarea.contact-form-text{
 
 }
 
+.card-container{
+  margin: 30px;
+  margin-right: 80%;
+  padding: 1px;
+  background-color: #ddd;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+.card-image{
+  display: block;
+  
+}
