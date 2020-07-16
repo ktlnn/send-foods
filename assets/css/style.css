@@ -111,6 +111,7 @@ a:hover:after {
 
 
 
+
 /* Contact Page*/
 
 /* .contact-bg {
@@ -205,7 +206,10 @@ textarea.contact-form-text{
 }
 
 @media only screen and (min-width: 300px){
+/* Developers Page */
 
+
+/* Restaurants Page */
 .card-container{
   background-color: rgba(46, 43, 43, 0.589);
   margin: auto;
@@ -242,7 +246,19 @@ textarea.contact-form-text{
 }
 }
 @media only screen and (min-width: 768px){
-/* results page - styling for cards */
+/* Developers Page */
+.profile-card {
+  width: 300px;
+  margin-left: 100px;
+  display: inline-block;
+  height: 500px;
+}
+
+.github-link {
+  color: rgb(146, 140, 140);
+}
+
+/* Restaurants Page */
 .card-container {
   margin: auto;
   margin-top: 128px;
