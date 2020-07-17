@@ -43,7 +43,7 @@ function handleSearchParameters() {
             }
         }).then(function (result) {
             console.log(result);
-            
+            callWeatherApi(cityInput);
             var cuisineID = result.restaurants;
             for (var i = 0; i < cuisineID.length; i++) {
                 console.log(cuisineID[i] + "hello");
@@ -80,7 +80,6 @@ function handleSearchParameters() {
                 createCard.append(createCardAction);
 
                 containerId.append(createCard);
-                callWeatherApi(cityInput);
             }
         });
     });

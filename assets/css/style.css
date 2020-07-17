@@ -43,6 +43,7 @@ h1 {
 ul {
   padding: 0;
   margin: 0;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,6 +214,8 @@ textarea.contact-form-text{
   text-align: center;
   width: 70%;
   margin: auto;
+  margin-top: 100px;
+  font-family: 'Oswald';
 }
 
 /* Restaurant Cards */
@@ -229,7 +232,7 @@ textarea.contact-form-text{
   background-color: rgb(58, 54, 54);
   padding: 5px;
   text-align: center;
-  font-family: 'neuton:wght@300';
+  font-family: "Playfair Display SC", serif;
 }
 .card-image{
   display: block;
@@ -240,7 +243,7 @@ textarea.contact-form-text{
   margin-top: 5px;
   text-align: center;
   color: white;
-  font-family: 'roboto condensed';
+  font-family: "Playfair Display SC", serif;
 
 }
 .res-info {
@@ -249,19 +252,20 @@ textarea.contact-form-text{
   color: white;
   padding: 10px;
   font-size: 15px;
+  font-family: "Playfair Display SC", serif;
 }
 }
 @media only screen and (min-width: 768px){
 /* Weather Card */
 #weather-card {
-  margin-top: 100px;
+  margin-top: 135px;
   width: 30%;
 }
 
 /* Resetaurant Page Cards */
 .card-container {
   margin: auto;
-  margin-top: 128px;
+  margin-top: 80px;
   margin-bottom: 20px;
   width: 50%;
   padding: 20px;
@@ -272,6 +276,10 @@ textarea.contact-form-text{
 .card-title {
   color: white;
   font-size: 30px;
+  text-align: center;
+}
+
+.card-action {
   text-align: center;
 }
 }
