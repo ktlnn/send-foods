@@ -1,3 +1,4 @@
+var apiKey = "1ab12a446aade358252321bfa87f68bc";
 $(document).ready(function () {
     $("#search-button").click(function (event) {
         event.preventDefault();
@@ -12,8 +13,8 @@ function handleSearchParameters() {
     // alert("button clicked");
     // console.log("button clicked");
 
-    var apiKey = "1ab12a446aade358252321bfa87f68bc";
-    // removes all child nodes
+    
+    
 
     // keeps track of search-input value, which is now linked to cityInput
     var cityInput = new URLSearchParams(window.location.search).get('q');
@@ -23,7 +24,7 @@ function handleSearchParameters() {
         url: cityURL,
         method: "GET",
         beforeSend: function (request) {
-            request.setRequestHeader("user-key", "1ab12a446aade358252321bfa87f68bc");
+            request.setRequestHeader("user-key", apiKey);
             // console.log(request);
         }
     }).then(function (response) {
@@ -38,10 +39,11 @@ function handleSearchParameters() {
             url: cuisineURL,
             method: "GET",
             beforeSend: function (request) {
-                request.setRequestHeader("user-key", "1ab12a446aade358252321bfa87f68bc");
+                request.setRequestHeader("user-key", apiKey);
             }
         }).then(function (result) {
             console.log(result);
+            
             var cuisineID = result.restaurants;
             for (var i = 0; i < cuisineID.length; i++) {
                 console.log(cuisineID[i] + "hello");
@@ -78,11 +80,34 @@ function handleSearchParameters() {
                 createCard.append(createCardAction);
 
                 containerId.append(createCard);
+                callWeatherApi(cityInput);
             }
         });
     });
 
 }
+// weather API
+var APIKey = "d292af27d806c0fcfa7e75827ed7045b"
+
+var callWeatherApi = function(cityInput){
+    var cityInput = new URLSearchParams(window.location.search).get('q');
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityInput + "&appid=" + APIKey;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+        
+        var weatherIcon = response.weather[0].icon;
+        $("#cityName").html(response.name + " (" + new Date().toLocaleDateString() + ")");
+        $("#mainIcon").html("<img src='" + "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png" + "'>")
+        $("#temperature").html("Temperature: " + response.main.temp + " &#8457;"); 
+        $("#humidity").text("Humidity: " + response.main.humidity + "%");
+        $("#wind-speed").text("Wind Speed: " + response.wind.speed + " MPH ")
+
+    });
+}
+
 console.log(window.location.search);
 if (typeof window.location.search != 'undefined' && new URLSearchParams(window.location.search).get('q') != null && new URLSearchParams(window.location.search).get('q').length > 0) {
     handleSearchParameters();

@@ -206,7 +206,16 @@ textarea.contact-form-text{
 }
 
 @media only screen and (min-width: 300px){
+/* Weather Card */
+#weather-card {
+  /* background-color: rgba(46, 43, 43, 0.589); */
+  color: white;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
 
+/* Restaurant Cards */
 .card-container{
   background-color: rgba(46, 43, 43, 0.589);
   margin: auto;
@@ -243,7 +252,13 @@ textarea.contact-form-text{
 }
 }
 @media only screen and (min-width: 768px){
-/* results page - styling for cards */
+/* Weather Card */
+#weather-card {
+  margin-top: 100px;
+  width: 30%;
+}
+
+/* Resetaurant Page Cards */
 .card-container {
   margin: auto;
   margin-top: 128px;
