@@ -55,9 +55,10 @@ function handleSearchParameters() {
 
                 var results = result.restaurants[i];
 
+                createCardImage.append($("<p>").addClass("card-title").text(results.restaurant.name))
                 createCardImage.append($("<img>").addClass("card-image").attr("src", results.restaurant.thumb))
 
-                createCardImage.append($("<span>").addClass("card-title").text(results.restaurant.name))
+                
 
 
 
@@ -65,10 +66,10 @@ function handleSearchParameters() {
 
                 var resRating = results.restaurant.user_rating.aggregate_rating;
                 
-                createCardContent.append($("<p>").addClass("resRating").html("Restaurant Rating: " + resRating + " ").css('text-align', 'left'));
+                createCardContent.append($("<p>").addClass("res-rating").html("Restaurant Rating: " + resRating + " "));
                 var resAddr = results.restaurant.location.address;
                 var resPhone = results.restaurant.phone_numbers;
-                createCardContent.append($("<p>").addClass("resInfo").html("Address: " + resAddr + '<br>' + "Phone Number: " + resPhone))
+                createCardContent.append($("<p>").addClass("res-info").html("Address: " + resAddr + '<br>' + "Phone Number: " + resPhone))
                 createCard.append(createCardContent);
 
                 var resLink = results.restaurant.url;
