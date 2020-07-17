@@ -203,10 +203,41 @@ textarea.contact-form-text{
 
 
 @media only screen and (max-width: 320px){
-
+.brand-name {
+  font-size: 40px;
+}
+.menu {
+  width: 60%;
+}
+header{
+  width: 50%;
+  margin: auto;
+}
+}
+@media only screen and (min-width: 300px){
+/* Developers Page */
+.card-content h1 {
+  font-size: 30px;
+  text-align: center;
+  padding: 0px;
+  font-family: "Playfair Display SC";
 }
 
-@media only screen and (min-width: 300px){
+.card {
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 45px;
+}
+
+.github-profile {
+  color: gray;
+}
+
+
+
+
+
 /* Weather Card */
 #weather-card {
   /* background-color: rgba(46, 43, 43, 0.589); */
@@ -225,6 +256,7 @@ textarea.contact-form-text{
   width: 88%;
   margin-top: 30px;
   padding: 15px;
+  margin-bottom: 20px;
 }
 .card-title{
   color: white;
@@ -254,8 +286,22 @@ textarea.contact-form-text{
   font-size: 15px;
   font-family: "Playfair Display SC", serif;
 }
+.card-action {
+  text-align: center;
+}
 }
 @media only screen and (min-width: 768px){
+Developers Page
+.card{
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100px;
+  height: 50%;
+}
+
+
+
 /* Weather Card */
 #weather-card {
   margin-top: 135px;
