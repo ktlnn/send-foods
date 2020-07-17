@@ -1,1 +1,15 @@
-# send-foods
+# Send-Foodz
+
+## User Story
+
+## How "Send Foodz" Works 
+
+## Technologies Used
+- Zomato API
+- OpenWeather API
+
+## Webpage Screenshots 
+![homepage-screenshot](assets/images/home-screenshot.png)
+![results-screenshot](assets/images/results-screenshot.png)
+![results-screenshot](assets/images/results2-screenshot.png)
+![contact-page-screenshot](assets/images/contact-screenshot.png)
