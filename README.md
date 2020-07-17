@@ -11,5 +11,5 @@
 ## Webpage Screenshots 
 ![homepage-screenshot](assets/images/home-screenshot.png)
 ![results-screenshot](assets/images/results-screenshot.png)
-![results-screenshot](assets/images/results2-screenshot.png)
+![results-screenshot](assets/images/results-2-screenshot.png)
 ![contact-page-screenshot](assets/images/contact-screenshot.png)
