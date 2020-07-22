@@ -1,5 +1,5 @@
 
-# Send-foods
+# Send-foodz
 Create a simple app that will show restuarant reviews with description to help the user research.
 ## User Story
 ```
