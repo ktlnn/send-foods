@@ -1,6 +1,16 @@
 
 # Send-foodz
 Create a simple app that will show restuarant reviews with description to help the user research.
+
+## Links
+Deployed Webpage: https://ktlnn.github.io/send-foodz/
+
+## Table of Contents
+- [User Story](#user-story)
+- [Flow](#flow)
+- [Technologies Used](#technologies-used)
+- [Webpage Screenshots](#webpage-screenshots)
+
 ## User Story
 ```
 AS a person who loves good food and is not familiar with all the restuarants around
@@ -31,10 +41,5 @@ If i click the home button on the top it will take me to the home page
 ![results-screenshot](assets/images/results-2-screenshot.png)
 ![send-foodz-demo](assets/images/send-foodz-demo.gif)
 ![contact-page-screenshot](assets/images/contact-screenshot.png)
-
-
-## Links
-1) https://ktlnn.github.io/send-foodz/
-2) https://github.com/ktlnn/send-foodz
 
 
